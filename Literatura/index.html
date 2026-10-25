@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatūra un vara</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page-container {
+            display: grid;
+            grid-template-columns: 42.2% 57.8%;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Kreisais teksta bloks */
+        .text-section {
+            background-color: #09290d;
+            color: #ffffff;
+            padding: 14px 17px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.4;
+            overflow-wrap: break-word;
+            min-width: 0;
+        }
+
+        .text-section h2 {
+            font-size: 20px;
+            margin: 0 0 18px;
+            line-height: 1.3;
+        }
+
+        .text-section p {
+            margin: 0 0 22px;
+        }
+
+        .text-section ul,
+        .text-section ol {
+            padding-left: 24px;
+            margin: 0 0 22px;
+        }
+
+        .text-section li {
+            padding-left: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* Labā puse */
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 0 16px 17px 13px;
+        }
+
+        /* Fotogrāfijas zona */
+        .photo-section {
+            flex: 1;
+            min-height: 300px;
+            background-color: #ffffff;
+
+            /* Nomaini šo tekstu pret fotogrāfijas saiti */
+            background-image: url("https://zagarins.net/Belsevica/Belsevica1.JPG");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Apakšējais virsraksts */
+        .section-title {
+            background-color: #1c261d;
+            color: #ffffff;
+            padding: 42px 32px 28px;
+            min-height: 124px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title h1 {
+            margin: 0;
+            font-size: 42px;
+            line-height: 1.15;
+            font-weight: 800;
+            font-style: italic;
+            overflow-wrap: break-word;
+        }
+
+        /* Pielāgošana telefoniem */
+        @media (max-width: 700px) {
+            .page-container {
+                grid-template-columns: 1fr;
+            }
+
+            .text-section {
+                padding: 20px;
+                font-size: 15px;
+            }
+
+            .text-section h2 {
+                font-size: 19px;
+            }
+
+            .right-section {
+                padding: 0 12px 12px;
+                min-height: 450px;
+            }
+
+            .photo-section {
+                min-height: 300px;
+            }
+
+            .section-title {
+                min-height: 100px;
+                padding: 25px 22px;
+            }
+
+            .section-title h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <!-- Kreisais teksta bloks -->
+        <section class="text-section">
+
+            
+
+            <p>
+                Belševicas attiecības ar padomju varu ir atsevišķa
+                un ļoti svarīga lappuse. Ārēji viņas biogrāfija
+                izskatījās kā padomju rakstnieces biogrāfija:
+                Rakstnieku savienības locekle, publikācijas,
+                tulkojumi. Taču literatūrā viņa arvien biežāk
+                teica to, ko vara negribēja dzirdēt.
+            </p>
+
+            <p>
+                Lūzums bija krājums <strong>«Gadu gredzeni»</strong>
+                (1969). Tā centrālais darbs ir poēma
+                <strong>«Indriķa Latvieša piezīmes uz Livonijas
+                hronikas malām»</strong>. Viduslaiku hronists tajā
+                it kā raksta dzejoļus lappušu malās, apraudot
+                tautas, kas tika pakļautas krusta karagājienu
+                laikā Baltijā, un aicinot tās pretoties.
+                Laikabiedri lieliski saprata, ka runa ir ne tikai
+                par 13. gadsimtu.
+            </p>
+
+            <p>
+                Pēc šī krājuma sākās spiediens: vara rīkoja
+                apspriedes, bet pēc tam uz četriem gadiem —
+                no 1971. līdz 1974. gadam — faktiski atņēma
+                Belševicai iespēju publicēties. 1972. gadā
+                viņas dzīvoklī notika sešpadsmit stundu kratīšana.
+                Taču tieši šis periods parādīja, cik spēcīga ir
+                viņas saikne ar lasītājiem. Cilvēki pārrakstīja
+                un citēja viņas dzejoļus, bet nepublicētais
+                krājums <strong>«Kamolā tinēja»</strong> gāja no
+                rokas rokā un melnajā tirgū tika pārdots par
+                tajos laikos lielu naudu. Daudziem latviešiem
+                Belševica kļuva ne vien par dzejnieci, bet par
+                iekšējās neatkarības simbolu.
+            </p>
+
+            <p>
+                1980. gadu beigās viņa vadīja Latvijas PEN kluba
+                Rīgas nodaļu. Šajos gados viņas autoritāte jau
+                bija neapstrīdama: pret viņu izturējās kā pret
+                cilvēku, kurš nav mainījis sevi arī tad,
+                kad tas bija bīstami.
+            </p>
+
+        </section>
+
+        <!-- Labā puse ar fotogrāfiju un virsrakstu -->
+        <section class="right-section">
+
+            <div class="photo-section"></div>
+
+            <header class="section-title">
+                <h1>Literatūra un vara</h1>
+            </header>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

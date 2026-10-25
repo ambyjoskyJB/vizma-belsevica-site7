@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vizma Belševica</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background: white;
+        font-family: Arial, sans-serif;
+        color: #111;
+    }
+
+    :root {
+        --lime: #b4eb12;
+        --green: #20b34b;
+    }
+
+    /* Навигация сверху */
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 9px;
+        padding: 5px 5px 0;
+    }
+
+    nav a {
+        min-height: 132px;
+        padding: 18px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        background-color: var(--lime);
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.45;
+
+        border-radius: 30px;
+
+        transition: transform 0.25s ease,
+                    box-shadow 0.25s ease;
+    }
+
+    /* Увеличение без смены цвета */
+
+    nav a:hover {
+        transform: scale(1.04);
+        box-shadow: 0 5px 15px #b4eb1260;
+    }
+
+    nav a:active {
+        transform: scale(0.98);
+    }
+
+    /* Основная часть */
+
+    .main {
+        display: grid;
+        grid-template-columns: 100px minmax(0, 1fr) 45px;
+        gap: 12px;
+        align-items: center;
+
+        max-width: 1200px;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+
+    /* Имя слева — VIZMA */
+
+    .name-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .name-left span {
+        display: block;
+        color: var(--green);
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 1.05;
+        -webkit-text-stroke: 1px black;
+
+        opacity: 0;
+        animation: slideLeft 0.7s ease forwards;
+    }
+
+    .name-left span:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .name-left span:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    .name-left span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .name-left span:nth-child(4) {
+        animation-delay: 0.55s;
+    }
+
+    .name-left span:nth-child(5) {
+        animation-delay: 0.7s;
+    }
+
+    /* Фамилия справа — BELŠEVICA */
+
+    .name-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .name-right span {
+        color: var(--green);
+        font-size: 29px;
+        font-weight: bold;
+        line-height: 1;
+        -webkit-text-stroke: 0.7px black;
+
+        opacity: 0;
+        animation: slideRight 0.7s ease forwards;
+    }
+
+    .name-right span:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .name-right span:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .name-right span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .name-right span:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    .name-right span:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    .name-right span:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+
+    .name-right span:nth-child(7) {
+        animation-delay: 0.8s;
+    }
+
+    .name-right span:nth-child(8) {
+        animation-delay: 0.9s;
+    }
+
+    .name-right span:nth-child(9) {
+        animation-delay: 1s;
+    }
+
+    /* Центральный текст */
+
+    .content {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .intro {
+        max-width: 680px;
+        margin: 0 auto 35px;
+
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.5;
+
+        opacity: 0;
+        animation: fadeIn 1s ease 0.4s forwards;
+    }
+
+    /* Фотография */
+
+    .portrait {
+        display: block;
+        width: min(100%, 300px);
+        height: 335px;
+
+        object-fit: cover;
+        object-position: center;
+
+        margin: 0 auto 25px;
+    }
+
+    /* Салатовая ссылка под фото */
+
+    .caption-link {
+        display: inline-block;
+        color: var(--lime);
+        text-decoration: none;
+        font-size: 21px;
+        font-weight: bold;
+
+        transition: transform 0.25s ease;
+    }
+
+    .caption-link:hover {
+        transform: scale(1.06);
+    }
+
+    /* Анимация появления имени */
+
+    @keyframes slideLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Адаптация под узкий экран */
+
+    @media (max-width: 750px) {
+        nav {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        nav a {
+            min-height: 85px;
+            font-size: 16px;
+            border-radius: 22px;
+        }
+
+        .main {
+            grid-template-columns: 35px minmax(0, 1fr) 25px;
+            gap: 8px;
+            padding: 0 8px;
+        }
+
+        .name-left {
+            gap: 30px;
+        }
+
+        .name-left span {
+            font-size: 29px;
+        }
+
+        .name-right {
+            gap: 25px;
+        }
+
+        .name-right span {
+            font-size: 16px;
+        }
+
+        .intro {
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        .portrait {
+            height: 280px;
+        }
+
+        .caption-link {
+            font-size: 16px;
+        }
+    }
+
+    /* Уважение к настройкам уменьшения анимации */
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+            opacity: 1 !important;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ВЕРХНЯЯ НАВИГАЦИЯ -->
+<nav>
+    <a href="about.html">Par viņu</a>
+
+    <a href="childhood.html">
+        Bērnība un ceļa sākums
+    </a>
+
+    <a href="literatura.html">
+        Literatūra un vara
+    </a>
+
+    <a href="bille.html">
+        «Bille»
+    </a>
+
+    <a href="poezija.html">
+        Dzeja
+    </a>
+
+    <a href="confession.html">
+        Atzinība
+    </a>
+</nav>
+
+
+<!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
+<main class="main">
+
+    <!-- Имя слева -->
+    <div class="name-left" aria-label="VIZMA">
+        <span>V</span>
+        <span>I</span>
+        <span>Z</span>
+        <span>M</span>
+        <span>A</span>
+    </div>
+
+
+    <!-- Текст, фотография и ссылка -->
+    <div class="content">
+
+        <p class="intro">
+            Vizma Belševica (1931–2005) — latviešu dzejniece, prozaiķe, dramaturģe un tulkotāja. Triloģijas «Bille», krājumu «Gadu gredzeni» un «Dzeltu laiks» autore; šie darbi iekļauti Latviešu kultūras kanonā. Trīs reizes nominēta Nobela prēmijai literatūrā. Viņu dēvē par «latviešu tautas sirdsapziņu».
+        </p>
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqJyjR_tT08Kz0uue5E4vvDE27gXXTmWczPBksi50Eb1joO4fRW7H65s3E&s=10"
+            alt="Vizma"
+            class="portrait"
+        >
+
+        <a href="kapec.html" class="caption-link">
+            Kāpēc Belševica ir svarīga
+        </a>
+
+    </div>
+
+
+    <!-- Фамилия справа -->
+    <div class="name-right" aria-label="BELŠEVICA">
+        <span>B</span>
+        <span>E</span>
+        <span>L</span>
+        <span>Š</span>
+        <span>E</span>
+        <span>V</span>
+        <span>I</span>
+        <span>C</span>
+        <span>A</span>
+    </div>
+
+</main>
+
+</body>
+</html>

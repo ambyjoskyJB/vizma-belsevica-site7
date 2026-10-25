@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par viņu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Galvenais lapas izkārtojums */
+        .page-container {
+            display: grid;
+            grid-template-columns: 42.2% 57.8%;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Kreisā puse ar tekstu */
+        .text-section {
+            background-color: #5b73ab;
+            color: #ffffff;
+            padding: 14px 17px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.4;
+            overflow-wrap: break-word;
+            min-width: 0;
+        }
+
+        .text-section p {
+            margin: 0 0 22px;
+        }
+
+        /* Labā puse ar fotogrāfijas vietu un virsrakstu */
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 0 16px 17px 13px;
+        }
+
+        /* Baltā zona fotogrāfijai */
+        .photo-section {
+            flex: 1;
+            min-height: 300px;
+            background-color: #ffffff;
+
+            background-image: url("https://zagarins.net/jg/jg302/JG302_3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Apakšējais virsraksts */
+        .section-title {
+            background-color: #93ab5b;
+            color: #ffffff;
+            padding: 42px 32px 28px;
+            min-height: 124px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title h1 {
+            margin: 0;
+            font-size: 42px;
+            line-height: 1.15;
+            font-weight: 800;
+            font-style: italic;
+            overflow-wrap: break-word;
+        }
+
+        /* Saraksti garākam tekstam */
+        .text-section ul,
+        .text-section ol {
+            padding-left: 24px;
+            margin: 0 0 22px;
+        }
+
+        .text-section li {
+            padding-left: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* Pielāgošana telefoniem un šauriem logiem */
+        @media (max-width: 700px) {
+            .page-container {
+                grid-template-columns: 1fr;
+            }
+
+            .text-section {
+                padding: 20px;
+                font-size: 15px;
+            }
+
+            .right-section {
+                padding: 0 12px 12px;
+                min-height: 450px;
+            }
+
+            .photo-section {
+                min-height: 300px;
+                flex: 1;
+            }
+
+            .section-title {
+                min-height: 100px;
+                padding: 25px 22px;
+            }
+
+            .section-title h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <!-- Kreisais teksta bloks -->
+        <section class="text-section">
+
+            <p>
+                Vizma Belševica latviešu literatūrā ieņem īpašu vietu.
+                Viņu dēvē par «latviešu tautas sirdsapziņu»,
+                pretestības dzejnieci un vienu no visiemīļotākajām
+                20. gadsimta prozas triloģijām — «Bille» — autori.
+                Taču aiz šiem apzīmējumiem slēpjas ļoti sarežģīta
+                cilvēka dzīvesstāsts: bērnība starpkaru Rīgā, karš,
+                padomju cenzūra, vairāki gadi, kad viņai faktiski tika
+                liegta iespēja publicēties, dēla zaudējums un
+                pakāpeniska izaugšana par vienu no nozīmīgākajām
+                nacionālās kultūras personībām.
+            </p>
+
+            <p>
+                Belševica bija dzejniece, prozaiķe, dramaturģe un
+                tulkotāja. Viņas darbi tulkoti aptuveni divdesmit
+                valodās, un viņas vārds trīs reizes tika izvirzīts
+                Nobela prēmijai literatūrā. Gandrīz viss, ko viņa
+                rakstīja — gan dzeju, gan prozu, — izauga no
+                personīgās pieredzes, no bērnības atmiņām, no
+                vēsturiskā netaisnīguma izjūtas un no nepieciešamības
+                saglabāt savu balsi.
+            </p>
+
+        </section>
+
+        <!-- Labā puse -->
+        <section class="right-section">
+
+            <!-- Šeit būs dzejnieces fotogrāfija -->
+            <div class="photo-section">
+            </div>
+
+            <!-- Apakšējais virsraksts -->
+            <header class="section-title">
+                <h1>Par viņu</h1>
+            </header>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
