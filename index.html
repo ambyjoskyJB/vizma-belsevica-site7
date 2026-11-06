@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vizma Belševica | Literatūra</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5f5f0;
+    color: #303a32;
+    line-height: 1.8;
+}
+
+/* Navigācija */
+
+header {
+    background: #263c32;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #d4dfd5;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+nav {
+    background: #344d40;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #c5d8c4;
+    color: #dce9d9;
+}
+
+/* Galvenais saturs */
+
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+section {
+    background: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    color: #344d40;
+    font-size: 27px;
+    font-weight: normal;
+    border-bottom: 1px solid #cbd8cb;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #47634f;
+    font-size: 21px;
+    font-weight: normal;
+    margin: 25px 0 12px;
+}
+
+p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+strong {
+    color: #344d40;
+}
+
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 14px;
+    padding-left: 5px;
+}
+
+/* Sākuma sadaļa */
+
+.intro {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.intro img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+figcaption {
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.intro-text h2 {
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* Attēlu galerija */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.gallery figure {
+    background: #f5f6f2;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: white;
+    border-radius: 3px;
+}
+
+/* Avoti */
+
+.sources ol {
+    padding-left: 25px;
+}
+
+.sources a {
+    color: #456b50;
+    overflow-wrap: anywhere;
+}
+
+.sources a:hover {
+    color: #263c32;
+}
+
+footer {
+    background: #263c32;
+    color: #dce5dc;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Pielāgošana telefoniem */
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .intro img {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 7px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Vizma Belševica</h1>
+    <p>Latviešu dzejniece, rakstniece un tulkotāja (1931–2005)</p>
+</header>
+
+<nav>
+    <a href="#sakums">Sākums</a>
+    <a href="#biografija">Biogrāfija</a>
+    <a href="#dzeja">Dzejas mantojums</a>
+    <a href="#vizualais">Vizuālais materiāls</a>
+    <a href="#avoti">Izmantotie avoti</a>
+</nav>
+
+<main class="container">
+
+<!-- SĀKUMS -->
+
+<section id="sakums">
+
+    <div class="intro">
+
+        <figure>
+            <!-- IEVIETo VIZMAS BELŠEVICAS PORTRETU -->
+            <img src="https://images.openai.com/static-rsc-4/REfqDcnFeMcIxQ5oWHVjChsnZEjenLCxyzPTTKngnDul9y5ub4GI0D-S8AoEgLYGo6sQ0niTq-vIuH8weOri2FmUpURWQukO-A2ytmpkLP0p48VibwLfuFRWrfmT3pjFxypvv1bS1t1rSDerMuBoEEU2wWI1BFu1BmWcOouhUVn_9Ou4Qrvy4SJWtKvyX2nX?purpose=fullsize"
+                 alt="Vizmas Belševicas portrets">
+
+            <figcaption>
+                Vizma Belševica. Fotogrāfijas autors norādāms pēc attēla avota.
+            </figcaption>
+        </figure>
+
+        <div class="intro-text">
+            <h2>Īsa informācija</h2>
+
+            <p>
+                <strong>Vizma Belševica</strong> (1931–2005) —
+                latviešu dzejniece, prozaiķe, dramaturģe un tulkotāja.
+                Viņas dzejoļu krājumi “Gadu gredzeni” (1969) un
+                “Dzeltu laiks” (1987), kā arī triloģija “Bille”
+                (1992–1999) iekļauti Latviešu kultūras kanonā.
+                Viņu dēvē par savas paaudzes rakstniecības sirdsapziņu
+                un pretestības dzejas balsi.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BIOGRĀFIJA -->
+
+<section id="biografija">
+
+    <h2>Biogrāfija</h2>
+
+    <p>
+        Vizma Belševica dzimusi 1931. gada 30. maijā Rīgā,
+        strādnieku ģimenē — tēvs Jānis Belševics, māte Ieva Belševica.
+        Bērnība pagāja Grīziņkalnā un pie radiniekiem Ugālē,
+        un šī pieredze vēlāk kļuva par pamatu triloģijai “Bille”.
+        Materiālo grūtību dēļ viņa pameta skolu 8. klasē,
+        strādāja tipogrāfijā un apmeklēja literatūras pulciņu
+        Valda Luksa vadībā.
+    </p>
+
+    <h3>Divi svarīgi dzīves posmi</h3>
+
+    <ol>
+        <li>
+            <strong>Ceļš līdz “Gadu gredzeniem” un publicēšanās aizliegums.</strong>
+            1969. gadā iznāca krājums “Gadu gredzeni”, kas izraisīja
+            skandālu, jo tajā iekļautā poēma
+            “Indriķa Latvieša piezīmes uz Livonijas hronikas malām”
+            tika uztverta kā alegorija par padomju varu.
+            Pēc tam Belševicai no 1971. līdz 1974. gadam
+            faktiski aizliedza publicēties, un 1972. gadā
+            viņas dzīvoklī notika 16 stundu kratīšana.
+        </li>
+
+        <li>
+            <strong>Atgriešanās ar “Dzeltu laiks” un “Bille”.</strong>
+            1987. gadā iznāca krājums “Dzeltu laiks”, kurā
+            Belševica turpināja attīstīt savu stilu, savijot
+            dabas tēmas ar vēsturisku poēmu sēriju, kurā
+            individuālās balsis ievietotas kolektīvos notikumos.
+            1990. gados viņa publicēja triloģiju “Bille”,
+            kas kļuva par vienu no nozīmīgākajiem latviešu
+            prozas darbiem.
+        </li>
+    </ol>
+
+    <p>
+        Belševica bija arī izcila tulkotāja: viņa tulkoja
+        Alana Milna “Vinniju Pūku”, Kiplinga pasakas,
+        Šekspīru un citus autorus.
+    </p>
+
+</section>
+
+<!-- DZEJAS MANTOJUMS -->
+
+<section id="dzeja">
+
+    <h2>Dzejas mantojums</h2>
+
+    <h3>Trīs dzejas krājumi</h3>
+
+    <ol>
+        <li>
+            <strong>“Gadu gredzeni” (1969).</strong>
+            Krājums, kas iekļauts Latviešu kultūras kanonā
+            un kļuva par nozīmīgu Latvijas kultūras notikumu,
+            jo autore filozofiskā perspektīvā parādīja
+            mākslinieka un patiesības attiecības pret varu,
+            atmetot sociālistiskā reālisma prasības.
+            Krājumā publicēti 28 iepriekš aizliegti un
+            19 pavisam jauni dzejoļi.
+        </li>
+
+        <li>
+            <strong>“Dzeltu laiks” (1987).</strong>
+            Pēdējais Belševicas oriģināldzejas krājums,
+            kurā apkopoti 1980. gados tapušie dzejoļi.
+            Cikls “Laika raksti” atdzīvina dažādu vēstures
+            laikmetu balsis, kas no pagātnes uzdod jautājumus tagadnei.
+        </li>
+
+        <li>
+            <strong>“Kamolā tinēja” (1981).</strong>
+            Dzejas izlase, kas tapusi laikā, kad Belševicai
+            bija liegta publicēšanās; tā kļuva par cenzūras
+            pretestības simbolu. Tajā iekļauti dzejoļi,
+            kas vēlāk kļuvuši par dziesmām, piemēram,
+            “Kamolā tinēja” ar Raimonda Paula mūziku.
+        </li>
+    </ol>
+
+    <h3>Pieci dzejoļi ar īsu pamatojumu</h3>
+
+    <ol>
+        <li>
+            <strong>“Indriķa Latvieša piezīmes uz Livonijas hronikas malām”</strong>
+            (no krājuma “Gadu gredzeni”).
+            Poēma, kurā viduslaiku hronists it kā raksta
+            dzejoļus lappušu malās, apraudot tautu likteņus
+            un aicinot pretoties. Laikabiedri to saprata
+            kā mājienu uz padomju okupāciju, un tā kļuva
+            par vienu no spilgtākajiem pretestības dzejas
+            piemēriem latviešu literatūrā.
+        </li>
+
+        <li>
+            <strong>“Rīga klusē”</strong> (publicēts krājumā
+            “Dzeltu laiks”).
+            Dzejolis, kurā Rīga klusē, kamēr vēji auro un vēji kauc,
+            bet klusē heraldiskie zvēri — tēls, kas pretstata
+            ārējo klusumu un iekšējo spriedzi.
+            Valsts prezidente Vaira Vīķe-Freiberga to nosauca
+            par vienu no dzejoļiem, kas raksturo Belševicas ģēniju.
+        </li>
+
+        <li>
+            <strong>“Nebrēc uz liepu, viņa ziedēs, kad būs viņas laiks”</strong>
+            (no krājuma “Dzeltu laiks”).
+            Dzejolis par pacietību un ticību dabiskajam ritmam.
+            Tas ir viens no skolās bieži lasītajiem Belševicas dzejoļiem.
+        </li>
+
+        <li>
+            <strong>“Zieda un cirvja strīdā”</strong>
+            (no krājuma “Dzeltu laiks”).
+            Nosaukums pats par sevi ir simbolisks:
+            zieds pret cirvi, trauslums pret vardarbību.
+            Dzejolis turpina Belševicas tēmu par skaistuma
+            un dzīvības pretošanos nežēlībai.
+        </li>
+
+        <li>
+            <strong>“Kamolā tinēja”</strong>
+            (no tāda paša nosaukuma dzejas izlases).
+            Dzejolis, kas kļuva plaši pazīstams kā dziesma
+            ar Raimonda Paula mūziku un uzvarēja 1980. gada
+            “Mikrofona” aptaujā. Tas parāda Belševicas
+            dzejas lirisko, dziedamo un tautai tuvo pusi.
+        </li>
+    </ol>
+
+</section>
+
+<!-- VIZUĀLAIS MATERIĀLS -->
+
+<section id="vizualais">
+
+    <h2>Vizuālais materiāls</h2>
+
+    <p>
+        Vizmas Belševicas dzīvi un literāro darbību
+        raksturo arī viņas fotogrāfijas un izdoto grāmatu vāki.
+    </p>
+
+    <div class="gallery">
+
+        <figure>
+            <!-- ŠEIT IEVIETO VIZMAS BELŠEVICAS PORTRETU -->
+            <img src="https://images.openai.com/static-rsc-4/REfqDcnFeMcIxQ5oWHVjChsnZEjenLCxyzPTTKngnDul9y5ub4GI0D-S8AoEgLYGo6sQ0niTq-vIuH8weOri2FmUpURWQukO-A2ytmpkLP0p48VibwLfuFRWrfmT3pjFxypvv1bS1t1rSDerMuBoEEU2wWI1BFu1BmWcOouhUVn_9Ou4Qrvy4SJWtKvyX2nX?purpose=fullsize"
+                 alt="Vizma Belševica">
+
+            <figcaption>
+                Vizma Belševica. Fotogrāfijas autors norādāms pēc attēla avota.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!-- ŠEIT IEVIETO GADU GREDZENI GRĀMATAS VĀKU -->
+            <img src="https://images.openai.com/static-rsc-4/k7HBAFwp91xGPmTu0fTHK8oXfUOhrbEPdAXbMMzGaFtutwsgAhPphdiHZsKZgRlcBdt9pkKdaFnDdIDXarWH-lDcuOTPfpuparbufF7ZGuQGOyzcfbw2ByZAjhCZcefueUaMuoXvB3Ty0XrceVpnkg4Yq674dHaXq8h6ah4_bndXOHe6d51dh-nY9zfzJdOD?purpose=fullsize"
+                 alt="Gadu gredzeni grāmatas vāks">
+
+            <figcaption>
+                Vizmas Belševicas dzejoļu krājums
+                “Gadu gredzeni” (1969) — viens no Latviešu
+                kultūras kanona darbiem.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!-- ŠEIT IEVIETO DZELTU LAIKS GRĀMATAS VĀKU -->
+            <img src="https://images.openai.com/static-rsc-4/Um6nMC7e-HrGYydCxp_1fGOA7MTRHt4pwNdqa1ulTBCyDmUzebgs9V-C4udb8IMET5tJmM9drjkNB3FJQUzkboaPsYYoSEnKonRR2g4ZU_RGojw5CLPDPsgdKLZJXZ8_4KH1Hj6TJhzsesBxIjkmc2HJTdP_33nPmlwRWZTqXPmHME0-cpbO6HMMJnMogBPQ?purpose=fullsize"
+                 alt="Dzeltu laiks grāmatas vāks">
+
+            <figcaption>
+                Vizmas Belševicas dzejas krājums
+                “Dzeltu laiks” (1987).
+            </figcaption>
+        </figure>
+
+    </div>
+
+</section>
+
+<!-- IZMANTOTIE AVOTI -->
+
+<section id="avoti" class="sources">
+
+    <h2>Izmantotie avoti</h2>
+
+    <ol>
+
+        <li>
+            Latvijas Kultūras kanons.
+            <em>Vizma Belševica: “Gadu gredzeni”,
+            “Dzeltu laiks”, triloģija “Bille”.</em>
+            <br>
+            <a href="https://kulturaskanons.lv/archive/vizma-belsevica/"
+               target="_blank" rel="noopener noreferrer">
+                https://kulturaskanons.lv/archive/vizma-belsevica/
+            </a>
+        </li>
+
+        <li>
+            Nacionālā enciklopēdija.
+            <em>Vizma Belševica.</em>
+            <br>
+            <a href="https://enciklopedija.lv/skirklis/89821-Vizma-Bel%C5%A1evica"
+               target="_blank" rel="noopener noreferrer">
+                https://enciklopedija.lv/skirklis/89821
+            </a>
+        </li>
+
+        <li>
+            Latvijas Kultūras kanons.
+            <em>Vizmas Belševicas dzejoļu krājumam
+            “Dzeltu laiks” – 30.</em>
+            <br>
+            <a href="https://kulturaskanons.lv/2017/08/11/vizmas-belsevicas-dzejolu-krajumam-dzeltu-laiks-30/"
+               target="_blank" rel="noopener noreferrer">
+                Lasīt rakstu
+            </a>
+        </li>
+
+        <li>
+            Letonika.lv.
+            <em>Gadu gredzeni, Vizma Belševica.</em>
+            <br>
+            <a href="https://www.letonika.lv/groups/default.aspx?g=1&id=2677299&q=raksts&r=264"
+               target="_blank" rel="noopener noreferrer">
+                Lasīt rakstu
+            </a>
+        </li>
+
+        <li>
+            Literatura.lv.
+            <em>Vizma Belševica.</em>
+            <br>
+            <a href="https://www.literatura.lv/lv/personas/vizma-belsevica"
+               target="_blank" rel="noopener noreferrer">
+                https://www.literatura.lv/lv/personas/vizma-belsevica
+            </a>
+        </li>
+
+    </ol>
+
+</section>
+
+</main>
+
+<footer>
+    <p>Vizma Belševica (1931–2005) | Latviešu literatūra</p>
+</footer>
+
+</body>
+</html>
